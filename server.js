@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
+const dotenv = require("dotenv");
+dotenv.config();
 
-const PORT = 3000;
+const PORT = 4000;
 
 // custom middleware
 
