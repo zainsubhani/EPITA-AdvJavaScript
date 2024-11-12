@@ -1,7 +1,7 @@
-const express = require("express");
-const router = express.Router();
+import { Router } from "express";
+const router = Router();
 
-const todoController = require("../todoController/todoController").default;
+import todoController from "../todoController/todoController.js";
 
 router.get("/getallToDo", todoController.getallToDo); //done tested
 router.get("/getbyidToDo/:id", todoController.getById); // done test
@@ -10,4 +10,4 @@ router.put("/putToDo/:id", todoController.putToDo); // whole resource update
 router.patch("/patchToDo/:id", todoController.patchToDo); // partial update
 router.delete("/deleteToDo/:id", todoController.deleteToDo); // done tested
 
-module.exports = router;
+export default router;
